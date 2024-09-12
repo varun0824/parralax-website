@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-x:hidden; /*  */
+    overflow-y:auto; /*  */
+    perspective:10px; /* value se fark nhi padta */
+} 
+
+
+.container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    z-index:-1; /* konsi layer kiske upar aati h */
+    transform-style: preserve-3d; /*  */
+
+}
+
+/* bg img dur karni h aur fg img pas rakhni h */
+.background{
+    transform:translateZ(-40px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+/* overlap karwana h */
+.background, .foreground{
+    position:absolute; 
+    height:100%;
+    width:100%;
+    z-index:-1;     /* adventure upar aajata h , layering manage karte h isse*/
+    object-fit: cover;  /* page ka size thiz ho jata h , pura width cover kar leti h image*/
+}
+
+h1{
+    position:absolute;
+    top:0rem;
+    font-size:7rem;
+    letter-spacing:4px;
+    color:white; 
+    text-shadow:0 0 10px rgba(0,0,0,0,3); 
+}
+
+section{
+    color:white;
+    background-color:rgb(45,45,45);
+    padding:5rem 0;
+}
+
+.sechead{
+    font-size:5rem;
+    padding:0 10rem;
+} 
+
+.text{
+    font-size:1.5rem;
+    margin: 5rem 10rem;
+    padding: 0 15 rem;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height:500px;
+}
+
+.desc{
+    position:absolute;
+    background-color: white;
+    padding:0.5rem 2.5rem;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    color:black;
+    font-size:3.5rem;
+    font-weight: 600;
+}
+
+.obj2{
+    background-image: url(sport-1.jpg);
+}
+
+.obj3{
+    background-image: url(sport-2.jpg);
+}
+
+.obj4{
+    background-image: url(sport-3.jpg);
+}
+
+
+/* #text1{
+    background-color: black;
+    color:white;
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index: -1;
+    overflow:hidden;
+    transform: translateZ(40px) scale(3);
+} */
